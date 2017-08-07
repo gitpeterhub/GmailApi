@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//for gmail inbox demo
+Route::get('gmailapi', 'Admin\MailController@gmailApiCall');
+Route::get('gmailapi/callback', 'Admin\MailController@gmailApiCallback');
+Route::get('gmailapi/useremail/{id}', 'Admin\MailController@getEmailById');
+
